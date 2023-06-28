@@ -1,0 +1,220 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+    <!-- Parent project coordinates -->
+    <groupId>com.nullchefo</groupId>
+    <artifactId>social-media-project</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+	<name>social-media-project</name>
+	<description>Demo project for Spring Boot</description>
+
+    <!-- Shared properties -->
+    <properties>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    </properties>
+
+    <!-- Shared dependencies -->
+    <dependencies>
+        <!-- Add your shared dependencies here -->
+
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!--
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-bridge-brave</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.zipkin.reporter2</groupId>
+			<artifactId>zipkin-reporter-brave</artifactId>
+		</dependency>
+		-->
+
+		<!-- https://spring.io/blog/2022/10/12/observability-with-spring-boot-3 -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-bridge-brave</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.zipkin.reporter2</groupId>
+			<artifactId>zipkin-reporter-brave</artifactId>
+		</dependency>
+
+
+		<!--         <dependency>
+					<groupId>com.github.loki4j</groupId>
+					<artifactId>loki-logback-appender</artifactId>
+					<version>1.4.0</version>
+				</dependency> -->
+
+
+		<!-- https://www.springcloud.io/post/2022-11/springboot-grafana/#gsc.tab=0 -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.opentelemetry</groupId>
+			<artifactId>opentelemetry-exporter-zipkin</artifactId>
+		</dependency>
+
+		<!-- OPEN_TELEMETRY
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-bridge-otel</artifactId>
+		</dependency>
+		-->
+
+		<dependency>
+			<groupId>io.opentelemetry</groupId>
+			<artifactId>opentelemetry-api</artifactId>
+		</dependency>
+    </dependencies>
+
+
+	<!-- Shared build plugins and configurations -->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${spring.boot.maven.plugin.version}</version>
+					<configuration>
+						<excludes>
+							<exclude>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+							</exclude>
+						</excludes>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>com.google.cloud.tools</groupId>
+					<artifactId>jib-maven-plugin</artifactId>
+					<version>3.3.1</version>
+					<configuration>
+						<from>
+							<image>eclipse-temurin:17</image>
+							<platforms>
+								<platform>
+									<architecture>arm64</architecture>
+									<os>linux</os>
+								</platform>
+								<platform>
+									<architecture>amd64</architecture>
+									<os>linux</os>
+								</platform>
+							</platforms>
+						</from>
+						<to>
+							<tags>
+								<tag>latest</tag>
+							</tags>
+						</to>
+					</configuration>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>build</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+
+<!--				<plugin>-->
+<!--					<groupId>org.springframework.boot</groupId>-->
+<!--					<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--					<configuration>-->
+<!--&lt;!&ndash;						<imageName>ghcr.io/nullchefo/diploma-project-${project.artifactId}:${project.version}</imageName>&ndash;&gt;-->
+<!--						<image>-->
+<!--							&lt;!&ndash;		<builder>dashaun/builder:tiny</builder>&ndash;&gt;-->
+<!--							<buildpacks>-->
+<!--								<buildpack>gcr.io/paketo-buildpacks/graalvm</buildpack>-->
+<!--								<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>-->
+<!--							</buildpacks>-->
+<!--							<env>-->
+<!--								&lt;!&ndash;	<BP_JVM_VERSION>19.0.2</BP_JVM_VERSION> &ndash;&gt;-->
+<!--								<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>-->
+<!--							</env>-->
+<!--						</image>-->
+<!--						<excludes>-->
+<!--							<exclude>-->
+<!--								<groupId>org.projectlombok</groupId>-->
+<!--								<artifactId>lombok</artifactId>-->
+<!--							</exclude>-->
+<!--						</excludes>-->
+<!--					</configuration>-->
+<!--				</plugin>-->
+
+<!--			<plugin>-->
+<!--				<groupId>org.graalvm.buildtools</groupId>-->
+<!--				<artifactId>native-maven-plugin</artifactId>-->
+<!--			</plugin>-->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<source>17</source>
+					<target>17</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+
+
+    <!-- Modules (child projects) -->
+    <modules>
+        <module>social-media</module>
+        <module>authorization-service</module>
+        <module>gateway-service</module>
+        <module>mail-send-service</module>
+        <!-- Add more modules if needed -->
+    </modules>
+</project>
