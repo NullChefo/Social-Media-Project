@@ -26,7 +26,7 @@ jobs:
       - name: Build the Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./front-end/
           push: true
           tags: ghcr.io/nullchefo/diploma-project-front-end:latest
           file: ./front-end/Dockerfile
