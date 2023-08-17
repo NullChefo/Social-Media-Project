@@ -41,9 +41,10 @@ jobs:
           pwd
           cd authorization-service
           pwd
+          ls
       - name: Get dependencies
-        run: mvn dependency:go-offline
+        run: ./mvnw dependency:go-offline
       - name: Run tests
-        run: mvn test
+        run: ./mvnw test
       - name: Build with Maven
-        run: mvn compile jib:build
+        run: ./mvnw compile jib:build
