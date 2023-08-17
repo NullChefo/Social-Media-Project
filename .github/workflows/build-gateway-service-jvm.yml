@@ -34,9 +34,11 @@ jobs:
           cache: maven
       - name: Goes to project directory
         run: |
-          cd back-end
-          ls
           pwd
+          ls
+          cd back-end
+          pwd
+          ls
           cd gateway-service
           pwd
           ls
