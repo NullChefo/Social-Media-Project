@@ -33,7 +33,7 @@ jobs:
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           cache: maven
       - name: get to the backend directory
-        run: cd back-end
+        run: cd back-end/
       - name: show directories
         run: ls
       - name: get to the project directory
