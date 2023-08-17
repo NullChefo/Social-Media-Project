@@ -32,22 +32,18 @@ jobs:
           distribution: 'zulu'
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           cache: maven
-      - name: Goes to project directory
-        run: |
-          pwd
-          ls
-          cd back-end
-          pwd
-          ls
-          cd gateway-service
-          pwd
-          ls
       - name: Get dependencies
         run: |
           cd back-end
           cd gateway-service
           mvn dependency:go-offline
       - name: Run tests
-        run: mvn test
+        run: |
+          cd back-end
+          cd gateway-service
+          mvn test
       - name: Build with Maven
-        run: mvn compile jib:build
+        run: |
+          cd back-end
+          cd gateway-service
+          mvn compile jib:build
