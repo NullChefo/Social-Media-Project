@@ -44,6 +44,8 @@ jobs:
           ls
       - name: Get dependencies
         run: |
+          cd back-end
+          cd gateway-service
           mvn dependency:go-offline
       - name: Run tests
         run: mvn test
