@@ -34,6 +34,8 @@ jobs:
           cache: maven
       - name: get to the backend directory
         run: cd back-end
+      - name: show directories
+        run: ls
       - name: get to the project directory
         run: cd social-media
       - name: Get dependencies
