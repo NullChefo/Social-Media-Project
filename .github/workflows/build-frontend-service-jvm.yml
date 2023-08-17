@@ -17,19 +17,20 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - uses: actions/checkout@v2
-      # - name: Goes to FE directory
-      #   run: |
-      #     cd front-end
-      #     # Run your commands that require being in the "folder" directory
-      #     echo "Hello from the 'front-end' directory"
-      #     ls
+      - name: Goes to FE directory
+        run: |
+          cd front-end
+          # Run your commands that require being in the "folder" directory
+          echo "Hello from the 'front-end' directory"
+          ls
+          pwt
       - name: Build the Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ./front-end/
+          context: .
           push: true
           tags: ghcr.io/nullchefo/social_media_project-front-end:latest
-          file: ./front-end/Dockerfile
+          file: ./Dockerfile
 
       - name: Tag image
         run: docker tag ghcr.io/nullchefo/social_media_project-front-end:latest ghcr.io/nullchefo/social_media_project-front-end:${{ github.sha }}
