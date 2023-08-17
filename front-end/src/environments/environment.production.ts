@@ -4,7 +4,7 @@ export const environment = {
 
 };
 export const UI_PORT = 4020;
-# TODO change
+// TODO change
 export const CLIENT_ID = 'angular-client';
 export const CLIENT_SECRET = "secret";
 export const AUTH_SERVER_URI = "https://auth.nullchefo.com";
