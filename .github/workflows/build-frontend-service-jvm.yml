@@ -28,10 +28,17 @@ jobs:
         with:
           context: ./front-end/
           push: true
-          tags: ghcr.io/nullchefo/diploma-project-front-end:latest
+          tags: ghcr.io/nullchefo/social_media_project-front-end:latest
           file: ./front-end/Dockerfile
-      - name: Push to GitHub Packages
-        run: |
-          docker tag ghcr.io/nullchefo/diploma-project-front-end:latest ghcr.io/nullchefo/diploma-project-front-end:${{ github.sha }}
-          docker push ghcr.io/nullchefo/diploma-project-front-end:latest
-          docker push ghcr.io/nullchefo/diploma-project-front-end:${{ github.sha }}
+
+      - name: Tag image
+        run: docker tag ghcr.io/nullchefo/social_media_project-front-end:latest ghcr.io/nullchefo/social_media_project-front-end:${{ github.sha }}
+        
+      - name: Push to GitHub Packages with latest tag
+        run: docker push ghcr.io/nullchefo/social_media_project-front-end:latest
+
+      - name: Push to GitHub Packages with SHA tag
+        run: docker push ghcr.io/nullchefo/social_media_project-front-end:${{ github.sha }}
+          
+          
+          
