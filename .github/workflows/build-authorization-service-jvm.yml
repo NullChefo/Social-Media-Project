@@ -35,16 +35,14 @@ jobs:
       - name: Goes to project directory
         run: |
           cd back-end
-          # Run your commands that require being in the "folder" directory
-          echo "Hello from the 'front-end' directory"
           ls
           pwd
           cd authorization-service
           pwd
           ls
       - name: Get dependencies
-        run: ./mvnw dependency:go-offline
+        run: mvn dependency:go-offline
       - name: Run tests
-        run: ./mvnw test
+        run: mvn test
       - name: Build with Maven
-        run: ./mvnw compile jib:build
+        run: mvn compile jib:build
