@@ -34,7 +34,7 @@ jobs:
           cache: maven
       - name: Goes to project directory
         run: |
-          cd front-end
+          cd back-end
           # Run your commands that require being in the "folder" directory
           echo "Hello from the 'front-end' directory"
           ls
