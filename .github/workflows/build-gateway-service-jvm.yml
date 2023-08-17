@@ -7,7 +7,7 @@ on:
     #  - dev
 
 env:
-  IMAGE_NAME: authorization
+  IMAGE_NAME: gateway-service
 jobs:
   # Label of the container job
   deploy:
