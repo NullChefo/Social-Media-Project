@@ -23,7 +23,7 @@ jobs:
           # Run your commands that require being in the "folder" directory
           echo "Hello from the 'front-end' directory"
           ls
-          pwt
+          pwd
       - name: Build the Docker image
         uses: docker/build-push-action@v2
         with:
