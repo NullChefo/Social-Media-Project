@@ -43,7 +43,8 @@ jobs:
           pwd
           ls
       - name: Get dependencies
-        run: mvn dependency:go-offline
+        run: |
+          mvn dependency:go-offline
       - name: Run tests
         run: mvn test
       - name: Build with Maven
