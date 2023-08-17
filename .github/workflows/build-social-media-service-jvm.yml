@@ -7,7 +7,7 @@ on:
     #  - dev
 
 env:
-  IMAGE_NAME: authorization
+  IMAGE_NAME: social-media
 jobs:
   # Label of the container job
   deploy:
