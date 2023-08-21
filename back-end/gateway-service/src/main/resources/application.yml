@@ -40,7 +40,7 @@ spring:
           enabled: false
       routes:
         - id: user-service-route
-          uri: http://user:8082
+          uri: http://smp-java-user-service:8082
           predicates:
             - Path=/user/**
           filters:
@@ -51,51 +51,52 @@ spring:
         #                name: userService
         #                fallbackUri: forward:/user-service-fallback
 
-        - id: auth-service-route
-          # lb://auth-service:8086 || lb://auth-service
-          uri: http://auth:8086
-          predicates:
-            - Path=/auth/**
-          filters:
-            - RewritePath=/api/auth/(?<segment>.*), /$\{segment}
+        # - id: auth-service-route
+        #   # lb://auth-service:8086 || lb://auth-service
+        #   uri: http://auth:8086
+        #   # uri: http://auth:8086
+        #   predicates:
+        #     - Path=/auth/**
+        #   filters:
+        #     - RewritePath=/api/auth/(?<segment>.*), /$\{segment}
         - id: mail-process-service-route
           # lb://mail-process-service:8084 || lb://mail-process-service
-          uri: http://mail-process:8084
+          uri: http://smp-java-mail-process-service:8084
           predicates:
             - Path=/mail/**
           filters:
             - RewritePath=/api/mail/(?<segment>.*), /$\{segment}
         - id: car-history-service-route
           # lb://car-history-service:8085 || lb://car-history-service
-          uri: http://car-history:8085
+          uri: http://smp-java-car-history-servicey:8085
           predicates:
             - Path=/car-history/**
           filters:
             - RewritePath=/car-history/(?<segment>.*), /$\{segment}
         - id: social-media-service-route
           # lb://car-history-service:8085 || lb://car-history-service
-          uri: http://social-media:8092
+          uri: http://smp-java-social-media-service:8092
           predicates:
             - Path=/social-media/**
           filters:
             - RewritePath=/social-media/(?<segment>.*), /$\{segment}
 
         - id: authorization-service-route
-          uri: http://authorization:9000
+          uri: http://smp-java-authorization-service:9000
           predicates:
             - Path=/authorization/**
           filters:
             - RewritePath=/authorization/(?<segment>.*), /$\{segment}
 
         - id: mail-send-route
-          uri: http://mail-send:8083
+          uri: http://smp-java-mail-send-serviced:8083
           predicates:
             - Path=/mail-send/**
           filters:
             - RewritePath=/mail-send/(?<segment>.*), /$\{segment}
 
         - id: mail-process-route
-          uri: http://mail-process:8084
+          uri: http://smp-java-mail-process-service:8084
           predicates:
             - Path=/mail-process/**
           filters:
