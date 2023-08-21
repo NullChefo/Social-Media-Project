@@ -55,7 +55,9 @@ public class SpringSecurityConfig {
                         "https://diploma-project.nullchefo.com",
                         "https://github.com",
                         "https://backend.nullchefo.com",
-                        "https://auth.nullchefo.com"
+                        "https://auth.nullchefo.com",
+                        "https://api.social-media-project.nullchefo.com",
+                        "https://smp-java-gateway-service--latest.icyisland-40395fb3.westeurope.azurecontainerapps.io"
                 ));
                 cc.setAllowedHeaders(List.of("*"));
                 cc.setAllowedMethods(List.of("*"));
