@@ -40,7 +40,7 @@ spring:
           enabled: false
       routes:
         - id: user-service-route
-          uri: http://smp-java-user-service:8082
+          uri: https://smp-java-user-service.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
           predicates:
             - Path=/user/**
           filters:
@@ -67,8 +67,9 @@ spring:
           filters:
             - RewritePath=/api/mail/(?<segment>.*), /$\{segment}
         - id: car-history-service-route
+          uri: https://smp-java-car-history-service-service.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
           # lb://car-history-service:8085 || lb://car-history-service
-          uri: http://localhost:8085
+          # uri: http://localhost:8085
           predicates:
             - Path=/car-history/**
           filters:
@@ -76,14 +77,16 @@ spring:
         - id: social-media-service-route
           # lb://car-history-service:8085 || lb://car-history-service
           # uri: http://smp-java-social-media-service:8092 
-          uri: http://localhost:8092
+          uri: http://smp-java-social-media-service.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
+          #uri: http://localhost:8092
           predicates:
             - Path=/social-media/**
           filters:
             - RewritePath=/social-media/(?<segment>.*), /$\{segment}
 
         - id: authorization-service-route
-          uri: https://localhost:9000
+          uri: https://smp-java-authorization-service.icyisland-40395fb3.westeurope.azurecontainerapps.io
+          #uri: https://localhost:9000
           # uri: http://smp-java-authorization-service:9000
           predicates:
             - Path=/authorization/**
@@ -91,7 +94,8 @@ spring:
             - RewritePath=/authorization/(?<segment>.*), /$\{segment}
 
         - id: mail-send-route
-          uri: http://localhost:8083
+          uri: https://smp-java-mail-send-service.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
+        #  uri: http://localhost:8083
         #  uri: http://smp-java-mail-send-serviced:8083
           predicates:
             - Path=/mail-send/**
