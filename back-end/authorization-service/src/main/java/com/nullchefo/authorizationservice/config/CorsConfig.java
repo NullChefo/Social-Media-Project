@@ -24,6 +24,7 @@ public class CorsConfig {
                 "http://localhost:4200",
                 "https://diploma-project.nullchefo.com",
                 "https://diploma-project-ui.nullchefo.com",
+                "https://social-media-project.nullchefo.com"
                 "https://backend.nullchefo.com",
                 "https://github.com",
                 "https://auth.nullchefo.com"));
@@ -45,6 +46,7 @@ public class CorsConfig {
                         "http://localhost:4200",
                         "https://diploma-project.nullchefo.com",
                         "https://diploma-project-ui.nullchefo.com",
+                        "https://social-media-project.nullchefo.com",
                         "https://github.com",
                         "https://backend.nullchefo.com",
                         "https://auth.nullchefo.com"
