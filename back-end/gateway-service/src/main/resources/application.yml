@@ -75,21 +75,24 @@ spring:
             - RewritePath=/car-history/(?<segment>.*), /$\{segment}
         - id: social-media-service-route
           # lb://car-history-service:8085 || lb://car-history-service
-          uri: http://smp-java-social-media-service:8092
+          # uri: http://smp-java-social-media-service:8092 
+          url: https://smp-java-social-media-service--latest.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
           predicates:
             - Path=/social-media/**
           filters:
             - RewritePath=/social-media/(?<segment>.*), /$\{segment}
 
         - id: authorization-service-route
-          uri: http://smp-java-authorization-service:9000
+          uri: https://authorization.social-media-project.nullchefo.com
+          # uri: http://smp-java-authorization-service:9000
           predicates:
             - Path=/authorization/**
           filters:
             - RewritePath=/authorization/(?<segment>.*), /$\{segment}
 
         - id: mail-send-route
-          uri: http://smp-java-mail-send-serviced:8083
+          uri: https://smp-java-mail-send-service--latest.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
+        #  uri: http://smp-java-mail-send-serviced:8083
           predicates:
             - Path=/mail-send/**
           filters:
