@@ -76,7 +76,7 @@ spring:
         - id: social-media-service-route
           # lb://car-history-service:8085 || lb://car-history-service
           # uri: http://smp-java-social-media-service:8092 
-          url: https://smp-java-social-media-service--latest.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
+          uri: https://smp-java-social-media-service--latest.internal.icyisland-40395fb3.westeurope.azurecontainerapps.io
           predicates:
             - Path=/social-media/**
           filters:
