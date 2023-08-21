@@ -35,7 +35,7 @@ jobs:
           registryPassword: ${{ secrets.SMPJAVAGATEWAYSERVICE_REGISTRY_PASSWORD }}
           containerAppName: smp-java-gateway-service
           resourceGroup: DefaultResourceGroup-WEU
-          imageToBuild: ghcr.io/gateway-service:${{ github.sha }}
+          imageToBuild: ghcr.io/nullchefo/social_media_project-gateway-service-azure:${{ github.sha }}
           
 
      
