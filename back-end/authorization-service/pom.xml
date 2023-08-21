@@ -80,7 +80,8 @@
         </dependency>
 
         <!-- https://www.springcloud.io/post/2022-11/springboot-grafana/#gsc.tab=0 -->
-        <dependency>
+
+        <!-- <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
             <scope>runtime</scope>
@@ -89,11 +90,11 @@
         <dependency>
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-exporter-zipkin</artifactId>
-        </dependency>
+        </dependency> -->
 
 
         <!-- https://spring.io/blog/2022/10/12/observability-with-spring-boot-3 -->
-        <dependency>
+        <!-- <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-tracing-bridge-brave</artifactId>
         </dependency>
@@ -102,6 +103,14 @@
             <groupId>io.zipkin.reporter2</groupId>
             <artifactId>zipkin-reporter-brave</artifactId>
         </dependency>
+
+       <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-api</artifactId>
+        </dependency> -->
+
+
+        <!-- Not Working loki-logback-appender and micrometer-tracing-bridge-otel -->
 
 <!--         <dependency>
             <groupId>com.github.loki4j</groupId>
@@ -117,10 +126,7 @@
         <!--		</dependency>-->
 
 
-        <dependency>
-            <groupId>io.opentelemetry</groupId>
-            <artifactId>opentelemetry-api</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>org.flywaydb</groupId>
