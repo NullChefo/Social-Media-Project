@@ -45,6 +45,10 @@ public class PopulateDefaultsUtil {
                         "https://diploma-project.nullchefo.com/silent-renew.html")
                 .redirectUri("https://diploma-project.nullchefo.com")
 
+				.redirectUri("https://social-media-project.nullchefo.com/auth/authorized")
+				.redirectUri("https://social-media-project.nullchefo.com")
+				.redirectUri("https://social-media-project.nullchefo.com/silent-renew.html")
+
                 .redirectUri(
                         "https://diploma-project-ui.nullchefo.com/auth/authorized")
                 .redirectUri(
