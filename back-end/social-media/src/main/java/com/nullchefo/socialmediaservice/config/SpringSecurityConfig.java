@@ -47,19 +47,20 @@ public class SpringSecurityConfig {
             CorsConfigurationSource source = s -> {
                 CorsConfiguration cc = new CorsConfiguration();
                 cc.setAllowCredentials(true);
-                cc.setAllowedOrigins(List.of("*")
-//									 List.of(
-//											 "http://127.0.0.1:3000",
-//											 "http://localhost:3000",
-//											 "http://127.0.0.1:4200",
-//											 "http://localhost:4200",
-//											 "https://diploma-project.nullchefo.com",
-//											 "https://github.com",
-//											 "https://backend.nullchefo.com",
-//											 "https://auth.nullchefo.com",
-//											 "https://api.social-media-project.nullchefo.com",
-//											 "https://smp-java-gateway-service--latest.icyisland-40395fb3.westeurope.azurecontainerapps.io"
-//											)
+                cc.setAllowedOrigins(
+									 List.of(
+											 "http://127.0.0.1:3000",
+											 "http://localhost:3000",
+											 "http://127.0.0.1:4200",
+											 "http://localhost:4200",
+											 "https://diploma-project.nullchefo.com",
+											 "https://github.com",
+											 "https://backend.nullchefo.com",
+											 "https://auth.nullchefo.com",
+											 "https://api.social-media-project.nullchefo.com",
+											 "https://smp-java-gateway-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
+											 "http://smp-java-gateway-service.icyisland-40395fb3.westeurope.azurecontainerapps.io"
+											)
 									);
                 cc.setAllowedHeaders(List.of("*"));
                 cc.setAllowedMethods(List.of("*"));
