@@ -10,6 +10,7 @@ import {
 import {Subscription} from 'rxjs';
 import {AuthService} from 'src/app/services/auth/auth.service';
 import {environment} from 'src/environments/environment';
+import {PROJECT_NAME} from "../../../constants/information";
 
 @Component({
   selector: 'app-top-panel',
@@ -30,6 +31,8 @@ export class TopPanelComponent implements OnInit, OnDestroy {
 
   isUserLogged = false;
   inDevelopment: boolean = environment.inDevelopment;
+
+  projectName: string = PROJECT_NAME;
 
   constructor(private authService: AuthService) {
   }

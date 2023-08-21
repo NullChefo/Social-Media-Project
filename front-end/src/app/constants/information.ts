@@ -1,4 +1,4 @@
-export const PROJECT_NAME = "Diploma-project";
+export const PROJECT_NAME = "Social Media Project";
 export const COMPANY_NAME = "Stefan Kehayov";
 export const PROJECT_ACTIVITIES = "university project";
 export const DATA_SOURCES = "none for now";
