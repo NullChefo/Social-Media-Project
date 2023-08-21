@@ -26,7 +26,9 @@ public class SecurityConfig {
                             "http://authorization:9000",
                             "https://auth.nullchefo.com",
                             "https://backend.nullchefo.com",
-                            "https://social-media-project.nullchefo.com"));
+                            "https://social-media-project.nullchefo.com",
+							"https://smp-java-gateway-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
+							"http://smp-java-gateway-service.icyisland-40395fb3.westeurope.azurecontainerapps.io"));
                     configuration.setAllowedMethods(List.of("*"));
                     configuration.setAllowedHeaders(List.of("*"));
                     return configuration;
