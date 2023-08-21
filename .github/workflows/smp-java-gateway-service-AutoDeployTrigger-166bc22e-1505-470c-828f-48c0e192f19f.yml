@@ -1,25 +1,25 @@
-# name: Trigger auto deployment for smp-java-gateway-service
+name: Trigger auto deployment for smp-java-gateway-service
 
-# # When this action will be executed
-# on:
-#   # Automatically trigger it when detected changes in repo
-#   push:
-#     branches: 
-#       [ main ]
-#     paths:
-#     - '**'
-#     - '.github/workflows/smp-java-gateway-service-AutoDeployTrigger-166bc22e-1505-470c-828f-48c0e192f19f.yml'
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/smp-java-gateway-service-AutoDeployTrigger-166bc22e-1505-470c-828f-48c0e192f19f.yml'
 
-#   # Allow mannually trigger 
-#   workflow_dispatch:
+  # Allow mannually trigger 
+  workflow_dispatch:
       
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Checkout to the branch
-#         uses: actions/checkout@v2
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
 
 #       - name: Azure Login
 #         uses: azure/login@v1
