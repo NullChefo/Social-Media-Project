@@ -150,8 +150,8 @@ management:
 
 address:
   frontEnd:
-    baseURL: https://diploma-project-ui.nullchefo.com
-    successfullyLogOut: https://diploma-project-ui.nullchefo.com/auth/logged-out
+    baseURL: https://social-media-project.nullchefo.com
+    successfullyLogOut: https://social-media-project.nullchefo.com/auth/logged-out
 
 springdoc:
   api-docs:
