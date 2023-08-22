@@ -150,7 +150,7 @@ public class UserControllerV2 {
             // 404
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.toString());
         }
 
         return ResponseEntity.ok().build();
