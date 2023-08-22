@@ -7,12 +7,13 @@ export const UI_PORT = 4020;
 // TODO change
 export const CLIENT_ID = 'angular-client';
 export const CLIENT_SECRET = "secret";
-// export const AUTH_SERVER_URI = "https://auth.nullchefo.com";
-// export const REDIRECT_URI = "https://diploma-project.nullchefo.com/auth/authorized";
-// export const API_URI = "https://backend.nullchefo.com";
+
 export const AUTH_SERVER_URI = "https://authorization.social-media-project.nullchefo.com";
 export const REDIRECT_URI = "https://social-media-project.nullchefo.com/auth/authorized";
 export const API_URI = "https://api.social-media-project.nullchefo.com";
+// export const AUTH_SERVER_URI = "https://auth.nullchefo.com";
+// export const REDIRECT_URI = "https://diploma-project.nullchefo.com/auth/authorized";
+// export const API_URI = "https://backend.nullchefo.com";
 export const SCOPES = "openid";
 export const AUTHORIZATION_URL = AUTH_SERVER_URI + "/oauth2/authorize";
 export const TOKEN_ENDPOINT = AUTH_SERVER_URI + "/oauth2/token";
