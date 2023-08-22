@@ -1,4 +1,4 @@
-name: Native-AMD64
+name: Build authorization-service native
 
 on:
   push:
