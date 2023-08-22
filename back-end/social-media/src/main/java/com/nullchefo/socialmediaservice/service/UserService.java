@@ -95,11 +95,11 @@ public class UserService {
         return userRepository.findByUsernameIgnoreCaseAndDeleted(username, false);
     }
 
-    public User getUserById(final Long userId) {
+    public User getUserById(final Long userId) throws NotFoundException{
         return userRepository.findById(userId).orElseThrow(() -> new NotFoundException("User not found"));
     }
 
-    public EditUserDTO updateUser(final EditUserDTO editUserCreateDTO) {
+    public EditUserDTO updateUser(final EditUserDTO editUserCreateDTO) throws ValidationFailureException,NotFoundException {
         User user = userRepository.findByUsernameIgnoreCaseAndDeleted(editUserCreateDTO.getUsername(), false);
 
         if (user == null) {
@@ -354,7 +354,7 @@ public class UserService {
         emailVerificationTokenRepository.save(verificationToken);
     }
 
-    public void changePassword(final UserPasswordChangeDTO passwordChangeDTO) {
+    public void changePassword(final UserPasswordChangeDTO passwordChangeDTO) throws ValidationFailureException {
         // check if deleted is required
         User user = userRepository.findByEmailIgnoreCaseAndDeleted(passwordChangeDTO.getEmail(), false);
 
@@ -364,7 +364,7 @@ public class UserService {
         }
     }
 
-    public void validateVerificationToken(String token) {
+    public void validateVerificationToken(String token) throws ValidationFailureException{
         EmailVerificationToken verificationToken
                 = emailVerificationTokenRepository.findByToken(token);
 
@@ -412,7 +412,7 @@ public class UserService {
         passwordResetTokenRepository.save(passwordResetToken);
     }
 
-    public void validatePasswordResetToken(String token) {
+    public void validatePasswordResetToken(String token) throws ValidationFailureException {
         PasswordResetToken passwordResetToken
                 = passwordResetTokenRepository.findByToken(token);
 
@@ -444,7 +444,7 @@ public class UserService {
         return passwordEncoder.matches(oldPassword, user.getPassword());
     }
 
-    public void savePassword(final String token, final UserPasswordChangeDTO passwordChangeDTO) {
+    public void savePassword(final String token, final UserPasswordChangeDTO passwordChangeDTO) throws ValidationFailureException {
 
         if (passwordChangeDTO.getNewPassword() == null) {
             throw new ValidationFailureException("New password can not be empty!");
@@ -459,7 +459,7 @@ public class UserService {
         }
     }
 
-    public void resendVerificationToken(final String token) {
+    public void resendVerificationToken(final String token) throws ValidationFailureException {
         EmailVerificationToken emailVerificationToken
                 = generateNewVerificationToken(token);
         if (emailVerificationToken == null) {
@@ -474,7 +474,7 @@ public class UserService {
         mailProducerService.passwordResetTokenMail(user, token);
     }
 
-    public void resetPassword(final UserPasswordChangeDTO passwordModel) {
+    public void resetPassword(final UserPasswordChangeDTO passwordModel) throws NotFoundException {
         User user = findUserByEmail(passwordModel.getEmail());
         if (user != null) {
             String token = UUID.randomUUID().toString();
