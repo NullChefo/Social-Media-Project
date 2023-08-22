@@ -42,9 +42,9 @@ public class UserService {
     private final EmailVerificationTokenRepository emailVerificationTokenRepository;
     private final MailProducerService mailProducerService;
     private final MailListRepository mailListRepository;
-    private final String authorizationService;
-    private final String mailProcess;
-    private final String mailSend;
+//    private final String authorizationService;
+//    private final String mailProcess;
+//    private final String mailSend;
 
     public UserService(
             final UserRepository userRepository,
@@ -74,9 +74,9 @@ public class UserService {
         this.passwordResetTokenRepository = passwordResetTokenRepository;
         this.mailProducerService = mailProducerService;
         this.mailListRepository = mailListRepository;
-        this.authorizationService = authorizationService;
-        this.mailProcess = mailProcess;
-        this.mailSend = mailSend;
+//        this.authorizationService = authorizationService;
+//        this.mailProcess = mailProcess;
+//        this.mailSend = mailSend;
     }
 
     public User getCurrentUser() {
@@ -109,9 +109,11 @@ public class UserService {
         User currentUser = getCurrentUser();
 
         if (!currentUser.getUsername().equals(editUserCreateDTO.getUsername())) {
+			log.error("You are not allowed to edit this user");
             throw new ValidationFailureException("You are not allowed to edit this user");
         }
         if (!editUserCreateDTO.getUsername().equals(user.getUsername())) {
+			log.error("You are not allowed to edit this user");
             throw new ValidationFailureException("You are not allowed to edit the username");
         }
         //		if(currentUser.getBirthday() == null){
@@ -136,6 +138,7 @@ public class UserService {
         //		}
 
         if (editUserCreateDTO.getEmail() == null) {
+			log.error("Email cannot be empty");
             throw new ValidationFailureException("Email cannot be empty");
         }
         if (editUserCreateDTO.isOauth() != user.isOauthUser()) {
@@ -274,22 +277,28 @@ public class UserService {
         return userRepository.findAllByDeleted(false, paging);
     }
 
-    public void registerUser(final UserRegisterDTO userRegisterDTO) {
+    public void registerUser(final UserRegisterDTO userRegisterDTO) throws  ValidationFailureException {
         User existingUser = userRepository.findByUsername(userRegisterDTO.getUsername());
         if (existingUser != null) {
+			log.error("User already exists");
             throw new ValidationFailureException("User already exists");
         }
 
         if (!Objects.equals(userRegisterDTO.getPassword(), userRegisterDTO.getMatchingPassword())) {
+			log.error("Passwords do not match");
             throw new ValidationFailureException("Passwords do not match");
         }
 
         if (userRegisterDTO.getUsername().length() < MINIMUM_LENGTH_OF_USERNAME) {
+			log.error("Username must be at least %s characters".formatted(
+					MINIMUM_LENGTH_OF_USERNAME));
             throw new ValidationFailureException("Username must be at least %s characters".formatted(
                     MINIMUM_LENGTH_OF_USERNAME));
         }
 
         if (userRegisterDTO.getPassword().length() < MINIMUM_LENGTH_OF_PASSWORD) {
+			log.error("Password must be at least %s characters".formatted(
+					MINIMUM_LENGTH_OF_PASSWORD));
             throw new ValidationFailureException("Password must be at least %s characters".formatted(
                     MINIMUM_LENGTH_OF_PASSWORD));
         }
