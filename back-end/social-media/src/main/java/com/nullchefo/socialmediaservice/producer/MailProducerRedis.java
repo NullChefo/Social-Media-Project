@@ -13,19 +13,19 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MailProducerRedis {
 
-	@Autowired
-	private RedisTemplate<String, Object> redisTemplate;
-
-	public void saveToRedis(String key, Object value) {
-		redisTemplate.opsForValue().set(key, value);
-	}
-
-	public Object getFromRedis(String key) {
-		return redisTemplate.opsForValue().getAndDelete(key);
-	}
-
-	public List<Object> getAllFromRedis(){
-		return Collections.singletonList(redisTemplate.keys("*"));
-	}
+//	@Autowired
+//	private RedisTemplate<String, Object> redisTemplate;
+//
+//	public void saveToRedis(String key, Object value) {
+//		redisTemplate.opsForValue().set(key, value);
+//	}
+//
+//	public Object getFromRedis(String key) {
+//		return redisTemplate.opsForValue().getAndDelete(key);
+//	}
+//
+//	public List<Object> getAllFromRedis(){
+//		return Collections.singletonList(redisTemplate.keys("*"));
+//	}
 
 }
