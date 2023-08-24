@@ -4,7 +4,7 @@ import com.nullchefo.socialmediaservice.DTO.MailDTO;
 import com.nullchefo.socialmediaservice.entity.EmailVerificationToken;
 import com.nullchefo.socialmediaservice.entity.MailList;
 import com.nullchefo.socialmediaservice.entity.User;
-import com.nullchefo.socialmediaservice.producer.MailProducer;
+import com.nullchefo.socialmediaservice.producer.MailProducerRabbitMQ;
 import com.nullchefo.socialmediaservice.repository.MailListRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,18 +17,18 @@ import java.util.Map;
 @Service
 public class MailProducerService {
 
-    private final MailProducer mailProducer;
+    private final MailProducerRabbitMQ mailProducerRabbitMQ;
     private final String validateRegistrationURL;
     private final String passwordResetURL;
 
     private final MailListRepository mailListRepository;
 
     public MailProducerService(
-            final MailProducer mailProducer,
+            final MailProducerRabbitMQ mailProducerRabbitMQ,
             @Value("${address.frontEnd.validateRegistrationURL}") final String validateRegistrationURL,
             @Value("${address.frontEnd.passwordResetURL}") final String passwordResetURL,
             final MailListRepository mailListRepository) {
-        this.mailProducer = mailProducer;
+        this.mailProducerRabbitMQ = mailProducerRabbitMQ;
         this.validateRegistrationURL = validateRegistrationURL;
         this.passwordResetURL = passwordResetURL;
         this.mailListRepository = mailListRepository;
@@ -56,7 +56,7 @@ public class MailProducerService {
         MailDTO mail = createMailObject(user, templateName);
         mail.setMailFields(mailFieldsReplacement);
 
-        mailProducer.sendMail(mail);
+        mailProducerRabbitMQ.sendMail(mail);
 
         log.info(
                 "Click the link to email verify: {}",
@@ -97,7 +97,7 @@ public class MailProducerService {
         mail.setMailFields(mailFieldsReplacement);
 
         // TODO use completableFeature
-        mailProducer.sendMail(mail);
+        mailProducerRabbitMQ.sendMail(mail);
 
         log.info(
                 "Click the link to Reset your Password: {}",

@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class MailProducer {
+public class MailProducerRabbitMQ {
     private final String exchange;
     private final String routingKey;
 
     private final RabbitTemplate rabbitTemplate;
 
-    public MailProducer(
+    public MailProducerRabbitMQ(
             @Value("${rabbitmq.exchange.name}") final String exchange,
             @Value("${rabbitmq.routing.key}") final String routingKey,
             RabbitTemplate rabbitTemplate) {
