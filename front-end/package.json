@@ -7,6 +7,7 @@
     "start-local": "ng serve",
     "build": "ng build",
     "build-versel": "ng build --configuration versel",
+    "build-hetzner": "ng build --configuration hetzner",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-production": "ng build  --aot --build-optimizer --common-chunk --vendor-chunk --optimization --progress --configuration=production"
