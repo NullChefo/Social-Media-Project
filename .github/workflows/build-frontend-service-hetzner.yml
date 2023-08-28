@@ -28,16 +28,6 @@ jobs:
       #     context: .
       #     push: true
       #     tags: ghcr.io/nullchefo/social_media_project-front-end:latest
-      #     file: ./Dockerfile
-      
-      - name: Tag image
-        run: docker tag ghcr.io/nullchefo/social_media_project-front-end:latest ghcr.io/nullchefo/social_media_project-front-end:${{ github.sha }}
-        
+      #     file: ./Dockerfile      
       - name: Push to GitHub Packages with latest tag
         run: docker push ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner
-
-      - name: Push to GitHub Packages with SHA tag
-        run: docker push ghcr.io/nullchefo/social_media_project-front-end:${{ github.sha }}
-          
-          
-          
