@@ -49,7 +49,13 @@ public class PopulateDefaultsUtil {
 				.redirectUri("https://social-media-project.nullchefo.com")
 				.redirectUri("https://social-media-project.nullchefo.com/silent-renew.html")
 
-                .redirectUri(
+
+				.redirectUri("https://social-media-project-java.nullchefo.com/auth/authorized")
+				.redirectUri("https://social-media-project-java.nullchefo.com")
+				.redirectUri("https://social-media-project-java.nullchefo.com/silent-renew.html")
+				.redirectUri("https://authorization.social-media-project-java.nullchefo.com")
+
+				.redirectUri(
                         "https://diploma-project-ui.nullchefo.com/auth/authorized")
                 .redirectUri(
                         "https://diploma-project-ui.nullchefo.com/silent-renew.html")
@@ -58,6 +64,9 @@ public class PopulateDefaultsUtil {
                 .redirectUri("https://backend.nullchefo.com/**")
                 .redirectUri(
                         "https://backend.nullchefo.com/webjars/swagger-ui/4.18.1/oauth2-redirect.html")
+
+
+
 
                 .tokenSettings(TokenSettings
                         .builder().accessTokenTimeToLive(

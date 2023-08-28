@@ -1,6 +1,11 @@
+import {API_URI, AUTH_SERVER_URI} from "./environment";
+
 export const environment = {
   production: true,
   inDevelopment: true,
+  AUTH_SERVER_URI: "https://authorization.social-media-project.nullchefo.com",
+  API_URI: "https://api.social-media-project.nullchefo.com",
+  REDIRECT_URI: "https://social-media-project.nullchefo.com/auth/authorized",
 
 };
 export const UI_PORT = 4020;
@@ -8,9 +13,11 @@ export const UI_PORT = 4020;
 export const CLIENT_ID = 'angular-client';
 export const CLIENT_SECRET = "secret";
 
-export const AUTH_SERVER_URI = "https://authorization.social-media-project.nullchefo.com";
-export const REDIRECT_URI = "https://social-media-project.nullchefo.com/auth/authorized";
-export const API_URI = "https://api.social-media-project.nullchefo.com";
+// export const AUTH_SERVER_URI = "https://authorization.social-media-project.nullchefo.com";
+// export const REDIRECT_URI = "https://social-media-project.nullchefo.com/auth/authorized";
+// export const API_URI = "https://api.social-media-project.nullchefo.com";
+
+
 // export const AUTH_SERVER_URI = "https://auth.nullchefo.com";
 // export const REDIRECT_URI = "https://diploma-project.nullchefo.com/auth/authorized";
 // export const API_URI = "https://backend.nullchefo.com";
