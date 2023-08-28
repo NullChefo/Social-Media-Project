@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserRegisterDTO} from 'src/types/Auth';
 import {AuthService} from 'src/app/services/auth/auth.service';
-import {AUTH_SERVER_URI} from 'src/environments/environment';
+import {environment} from 'src/environments/environment';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +10,7 @@ import {AUTH_SERVER_URI} from 'src/environments/environment';
 })
 export class RegisterComponent implements OnInit {
 
-  authorizationServer = AUTH_SERVER_URI;
+  authorizationServer = environment.AUTH_SERVER_URI;
   error = "";
 
   isMailValid = true;

@@ -5,7 +5,7 @@ import {NewPasswordDTO, ResetPassword} from 'src/types/Auth';
 import {Subscription} from 'rxjs';
 import {AuthService} from 'src/app/services/auth/auth.service';
 import {ActivatedRoute} from '@angular/router';
-import {AUTH_SERVER_URI} from 'src/environments/environment';
+import {environment} from 'src/environments/environment';
 
 @Component({
   selector: 'app-set-new-password',
@@ -13,7 +13,7 @@ import {AUTH_SERVER_URI} from 'src/environments/environment';
   styleUrls: ['./set-new-password.component.css']
 })
 export class SetNewPasswordComponent implements OnInit {
-  loginURL = AUTH_SERVER_URI + '/login';
+  loginURL = environment.AUTH_SERVER_URI + '/login';
   token = "";
   validationError = "";
   error = "";

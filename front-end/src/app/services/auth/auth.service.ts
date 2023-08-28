@@ -1,13 +1,13 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {
-  AUTH_SERVER_URI,
   CLIENT_ID,
   CLIENT_SECRET,
   INTROSPECT_TOKEN_ENDPOINT,
   REVOKE_ENDPOINT,
   USER_PATH_V1,
-  USER_PATH_V2
+  USER_PATH_V2, environment
 } from '../../../environments/environment';
+
 
 import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
@@ -198,7 +198,7 @@ export class AuthService {
     this.userAuthorized.emit(false);
     this.userLoggedIn = false;
 
-    this.redirectToExternalAddress(AUTH_SERVER_URI + '/logout');
+    this.redirectToExternalAddress(environment.AUTH_SERVER_URI + '/logout');
     return this.http.post(REVOKE_ENDPOINT, formData, options)
       .subscribe({
         next: (value: any) => {
@@ -210,7 +210,7 @@ export class AuthService {
 
         },
         complete: () => {
-          this.redirectToExternalAddress(AUTH_SERVER_URI + '/logout');
+          this.redirectToExternalAddress(environment.AUTH_SERVER_URI + '/logout');
 
         }
       })

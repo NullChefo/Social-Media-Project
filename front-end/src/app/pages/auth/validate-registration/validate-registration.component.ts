@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {AuthService} from 'src/app/services/auth/auth.service';
-import {AUTH_SERVER_URI} from 'src/environments/environment';
+import {environment} from 'src/environments/environment';
 
 @Component({
   selector: 'app-validate-registration',
@@ -12,7 +12,7 @@ import {AUTH_SERVER_URI} from 'src/environments/environment';
 })
 export class ValidateRegistrationComponent implements OnInit {
 
-  loginURL = AUTH_SERVER_URI + "/login";
+  loginURL = environment.AUTH_SERVER_URI + "/login";
 
   token = "";
   validationError = "";
