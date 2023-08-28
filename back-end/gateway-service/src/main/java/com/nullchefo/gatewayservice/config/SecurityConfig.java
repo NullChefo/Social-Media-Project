@@ -40,8 +40,10 @@ public class SecurityConfig {
 
 							"https://social-media-project-java.nullchefo.com",
 							"https://api.social-media-project-java.nullchefo.com",
-							"https://authorization.social-media-project-java.nullchefo.com"
-
+							"https://authorization.social-media-project-java.nullchefo.com",
+							"http://social-media-project-java.nullchefo.com",
+							"http://authorization.social-media-project-java.nullchefo.com",
+							"http://api.social-media-project-java.nullchefo.com"
 
 							));
                     configuration.setAllowedMethods(List.of("*"));
