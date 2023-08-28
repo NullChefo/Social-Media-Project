@@ -326,6 +326,7 @@ public class UserService {
         saveUserIntoMailList(user, userRegisterDTO);
         //	});
 
+		// TODO!!! fix mail send and disable user
         //	Thread.ofVirtual().start(() -> {
         // sets the verification token for the user
         saveVerificationTokenForUser(token, user);
@@ -335,7 +336,7 @@ public class UserService {
 		// TODO!!! fix mail send and disable user
         //	Thread.ofVirtual().start(() -> {
         //sends the verification token
-        mailProducerService.sendEmailVerification(user, token);
+        // mailProducerService.sendEmailVerification(user, token);
         //	});
 
     }
