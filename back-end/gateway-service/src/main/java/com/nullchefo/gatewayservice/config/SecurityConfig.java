@@ -44,10 +44,10 @@ public class SecurityConfig {
 							"http://social-media-project-java.nullchefo.com",
 							"http://authorization.social-media-project-java.nullchefo.com",
 							"http://api.social-media-project-java.nullchefo.com"
-
 							));
                     configuration.setAllowedMethods(List.of("*"));
                     configuration.setAllowedHeaders(List.of("*"));
+					configuration.setAllowCredentials(true);
                     return configuration;
                 }).and()
 

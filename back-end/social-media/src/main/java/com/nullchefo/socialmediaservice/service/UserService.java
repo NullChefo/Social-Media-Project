@@ -310,6 +310,9 @@ public class UserService {
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
+		// TODO!!! fix mail send and disable user
+		user.setEnabled(true);
+
         try {
             userRepository.save(user);
         } catch (Exception e) {
@@ -328,6 +331,8 @@ public class UserService {
         saveVerificationTokenForUser(token, user);
         //	});
 
+
+		// TODO!!! fix mail send and disable user
         //	Thread.ofVirtual().start(() -> {
         //sends the verification token
         mailProducerService.sendEmailVerification(user, token);
