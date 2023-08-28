@@ -35,7 +35,11 @@ public class CorsConfig {
 				"https://smp-java-front-end.icyisland-40395fb3.westeurope.azurecontainerapps.io",
 				"https://smp-java-gateway-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
 				"https://smp-java-mail-send-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
-				"https://smp-java-social-media-service.icyisland-40395fb3.westeurope.azurecontainerapps.io"
+				"https://smp-java-social-media-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
+
+				"https://social-media-project-java.nullchefo.com",
+				"https://api.social-media-project-java.nullchefo.com",
+				"https://authorization.social-media-project-java.nullchefo.com"
 
 
 				));
@@ -68,7 +72,10 @@ public class CorsConfig {
 						"https://smp-java-front-end.icyisland-40395fb3.westeurope.azurecontainerapps.io",
 						"https://smp-java-gateway-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
 						"https://smp-java-mail-send-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
-						"https://smp-java-social-media-service.icyisland-40395fb3.westeurope.azurecontainerapps.io"
+						"https://smp-java-social-media-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
+						"https://social-media-project-java.nullchefo.com",
+						"https://api.social-media-project-java.nullchefo.com",
+						"https://authorization.social-media-project-java.nullchefo.com"
                 ));
                 cc.setAllowedHeaders(List.of("*"));
                 cc.setAllowedMethods(List.of("*"));
