@@ -1,10 +1,9 @@
-
-
 export const environment = {
     production: true,
     inDevelopment: true,
+    enableEmailSendForRegistrationScreen: true,
     AUTH_SERVER_URI: "http://localhost:9000",
-    API_URI:  "http://localhost:8000",
+    API_URI: "http://localhost:8000",
     REDIRECT_URI: "http://127.0.0.1:4200/auth/authorized",
 
 };

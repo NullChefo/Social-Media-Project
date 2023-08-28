@@ -1,11 +1,10 @@
-
-
 export const environment = {
-  production: true,
-  inDevelopment: true,
-  AUTH_SERVER_URI: "https://authorization.social-media-project.nullchefo.com",
-  API_URI: "https://api.social-media-project.nullchefo.com",
-  REDIRECT_URI: "https://social-media-project.nullchefo.com/auth/authorized",
+    production: true,
+    inDevelopment: true,
+    enableEmailSendForRegistrationScreen: false,
+    AUTH_SERVER_URI: "https://authorization.social-media-project.nullchefo.com",
+    API_URI: "https://api.social-media-project.nullchefo.com",
+    REDIRECT_URI: "https://social-media-project.nullchefo.com/auth/authorized",
 
 };
 export const UI_PORT = 4020;

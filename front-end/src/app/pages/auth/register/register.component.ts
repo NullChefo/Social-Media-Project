@@ -213,7 +213,12 @@ export class RegisterComponent implements OnInit {
       },
       next: () => {
         this.resetForm();
-        this.authService.redirectToInternalAddress("/auth/thanks-for-registration");
+        if(environment.enableEmailSendForRegistrationScreen){
+            this.authService.redirectToInternalAddress("/auth/thanks-for-registration");
+        }else{
+            this.logIn();
+        }
+
       },
       complete: () => {
       },

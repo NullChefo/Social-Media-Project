@@ -1,6 +1,7 @@
 export const environment = {
     production: false,
     inDevelopment: true,
+    enableEmailSendForRegistrationScreen: false,
     AUTH_SERVER_URI: "https://auth.nullchefo.com",
     API_URI: "https://diploma-project-ui.nullchefo.com/auth/authorized",
     REDIRECT_URI: "https://backend.nullchefo.com",
