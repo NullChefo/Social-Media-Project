@@ -24,7 +24,7 @@ public class Authorization {
     // TODO fix
     @Column(length = 99000)
     private String attributes;
-    @Column(length = 500)
+    @Column(length = 9500)
     private String state;
 
     @Column(length = 9000)
@@ -37,10 +37,10 @@ public class Authorization {
     private String accessTokenValue;
     private Instant accessTokenIssuedAt;
     private Instant accessTokenExpiresAt;
-    @Column(length = 2000)
+    @Column(length = 9000)
     private String accessTokenMetadata;
     private String accessTokenType;
-    @Column(length = 1000)
+    @Column(length = 9000)
     private String accessTokenScopes;
     @Column(length = 9000)
     private String refreshTokenValue;
@@ -52,7 +52,7 @@ public class Authorization {
     private String oidcIdTokenValue;
     private Instant oidcIdTokenIssuedAt;
     private Instant oidcIdTokenExpiresAt;
-    @Column(length = 2000)
+    @Column(length = 9000)
     private String oidcIdTokenMetadata;
     @Column(length = 9000)
     private String oidcIdTokenClaims;

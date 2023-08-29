@@ -30,9 +30,9 @@ public class Client {
     private String redirectUris;
     @Column(length = 1000)
     private String scopes;
-    @Column(length = 2000)
+    @Column(length = 9000)
     private String clientSettings;
-    @Column(length = 2000)
+    @Column(length = 9000)
     private String tokenSettings;
 
 }
