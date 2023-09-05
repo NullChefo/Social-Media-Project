@@ -84,10 +84,10 @@ jobs:
 
       #Deploy the image to the Docker registry
       - name: Tag the Docker image
-        run: docker tag social-media-service:latest ghcr.io/nullchefo/social-media-project-social-media-service
+        run: docker tag social-media-service ghcr.io/nullchefo/social-media-project-social-media-service--native
 
       - name: Tag the Docker image as native
-        run: docker tag ghcr.io/nullchefo/social-media-project-social-media-service ghcr.io/nullchefo/social-media-project-social-media-service:native-latest
+        run: docker tag ghcr.io/nullchefo/social-media-project-social-media-service ghcr.io/nullchefo/social-media-project-social-media-service--native:latest
 
       - name: Push Images to Docker Registry
-        run: docker push -a ghcr.io/nullchefo/social-media-project-social-media-service
+        run: docker push -a ghcr.io/nullchefo/social-media-project-social-media-service--native

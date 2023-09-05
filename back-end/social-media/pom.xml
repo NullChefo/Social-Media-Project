@@ -309,7 +309,7 @@
 				<version>3.1.2</version>
                 <configuration>
 					<!--					<imageName>ghcr.io/nullchefo/social-media-project-${project.artifactId}:${project.version}</imageName>-->
-					<imageName>${project.artifactId}:latest</imageName>
+					<imageName>${project.artifactId}:${project.version}</imageName>
 					<image>
 						<buildpacks>
 							<!--	<builder>dashaun/builder:tiny</builder>		-->
