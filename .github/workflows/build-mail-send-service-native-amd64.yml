@@ -83,8 +83,12 @@ jobs:
 #      #          SPRING_DATASOURCE_PASSWORD: "rootpassword"
 
       #Deploy the image to the Docker registry
+
+      - name: Docker list images
+        run: docker images
+        
       - name: Tag the Docker image
-        run: docker tag mail-send-service ghcr.io/nullchefo/social-media-project-mail-send-service--native
+        run: docker tag mail-send-service:latest ghcr.io/nullchefo/social-media-project-mail-send-service--native
 
       - name: Tag the Docker image as native
         run: docker tag ghcr.io/nullchefo/social-media-project-mail-send-service--native ghcr.io/nullchefo/social-media-project-mail-send-service--native:latest
