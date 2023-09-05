@@ -69,6 +69,9 @@ jobs:
         run: |
           cd back-end
           cd authorization-service
+          mvn -Pnative -Dmaven.test.skip=true spring-boot:build-image
+
+      #          mvn -Pnative -Dmaven.test.skip=true -e -X spring-boot:build-image
 
 
 #      - name: Build with Maven
