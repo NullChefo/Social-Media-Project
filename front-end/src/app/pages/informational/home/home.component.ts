@@ -8,7 +8,7 @@ import {AuthService} from 'src/app/services/auth/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  projectName: string = "Diploma Project";
+  projectName: string = "Social Media Project";
 
   isUserSignedIn: boolean = false;
 
