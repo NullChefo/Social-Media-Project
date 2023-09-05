@@ -245,7 +245,7 @@
 						<env>
 							<BP_JVM_VERSION>19.0.2</BP_JVM_VERSION>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
-							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>--enable-preview</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
+<!--							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>&#45;&#45;enable-preview</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>-->
 						</env>
 					</image>
                     <excludes>
