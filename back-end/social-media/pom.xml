@@ -314,6 +314,7 @@
 							<!--	<builder>dashaun/builder:tiny</builder>		-->
 							<buildpack>gcr.io/paketo-buildpacks/graalvm</buildpack>
 							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
+							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>--enable-preview</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
 						</buildpacks>
 						<env>
 							<BP_JVM_VERSION>19.0.2</BP_JVM_VERSION>
