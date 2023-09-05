@@ -232,16 +232,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-				<version>3.1.0</version>
+				<version>3.1.2</version>
                 <configuration>
 
-                    <imageName>ghcr.io/nullchefo/diploma-project-${project.artifactId}:${project.version}</imageName>
+                    <imageName>ghcr.io/nullchefo/social-media-project-${project.artifactId}:${project.version}</imageName>
 					<image>
 						<!--		<builder>dashaun/builder:tiny</builder>-->
-						<buildpacks>
-							<buildpack>gcr.io/paketo-buildpacks/graalvm</buildpack>
-							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
-						</buildpacks>
+<!--						<buildpacks>-->
+<!--							<buildpack>gcr.io/paketo-buildpacks/graalvm</buildpack>-->
+<!--							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>-->
+<!--						</buildpacks>-->
 						<env>
 							<!--	<BP_JVM_VERSION>19.0.2</BP_JVM_VERSION> -->
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
