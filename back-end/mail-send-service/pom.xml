@@ -237,13 +237,13 @@
 
                     <imageName>ghcr.io/nullchefo/social-media-project-${project.artifactId}:${project.version}</imageName>
 					<image>
-						<!--		<builder>dashaun/builder:tiny</builder>-->
-<!--						<buildpacks>-->
-<!--							<buildpack>gcr.io/paketo-buildpacks/graalvm</buildpack>-->
-<!--							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>-->
-<!--						</buildpacks>-->
+						<buildpacks>
+							<!--	<builder>dashaun/builder:tiny</builder>		-->
+							<buildpack>gcr.io/paketo-buildpacks/graalvm</buildpack>
+							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
+						</buildpacks>
 						<env>
-							<!--	<BP_JVM_VERSION>19.0.2</BP_JVM_VERSION> -->
+							<BP_JVM_VERSION>19.0.2</BP_JVM_VERSION>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 						</env>
 					</image>
