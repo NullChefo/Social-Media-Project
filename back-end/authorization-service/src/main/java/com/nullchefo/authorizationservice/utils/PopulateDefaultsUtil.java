@@ -64,7 +64,9 @@ public class PopulateDefaultsUtil {
                 .redirectUri("https://backend.nullchefo.com/**")
                 .redirectUri(
                         "https://backend.nullchefo.com/webjars/swagger-ui/4.18.1/oauth2-redirect.html")
-
+															.redirectUri("https://ui-social-media-project-java-railway.nullchefo.com/silent-renew.html")
+															.redirectUri("https://ui-social-media-project-java-railway.nullchefo.com/auth/authorized")
+															.redirectUri("https://ui-social-media-project-java-railway.nullchefo.com")
 
 
 

@@ -42,7 +42,14 @@ public class CorsConfig {
 				"https://authorization.social-media-project-java.nullchefo.com",
 				"http://social-media-project-java.nullchefo.com",
 				"http://authorization.social-media-project-java.nullchefo.com",
-				"http://api.social-media-project-java.nullchefo.com"
+				"http://api.social-media-project-java.nullchefo.com",
+
+				"https://authorization-social-media-project-java-railway.nullchefo.com",
+				"http://authorization-social-media-project-java-railway.nullchefo.com",
+				"https://api-social-media-project-java-railway.nullchefo.com",
+				"http://api-social-media-project-java-railway.nullchefo.com",
+				"https://ui-social-media-project-java-railway.nullchefo.com",
+				"http://ui-social-media-project-java-railway.nullchefo.com"
 
 
 				));
@@ -82,7 +89,15 @@ public class CorsConfig {
 						"https://authorization.social-media-project-java.nullchefo.com",
 						"http://social-media-project-java.nullchefo.com",
 						"http://authorization.social-media-project-java.nullchefo.com",
-						"http://api.social-media-project-java.nullchefo.com"
+						"http://api.social-media-project-java.nullchefo.com",
+						"https://authorization-social-media-project-java-railway.nullchefo.com",
+						"http://authorization-social-media-project-java-railway.nullchefo.com",
+						"https://api-social-media-project-java-railway.nullchefo.com",
+						"http://api-social-media-project-java-railway.nullchefo.com",
+						"https://ui-social-media-project-java-railway.nullchefo.com",
+						"http://ui-social-media-project-java-railway.nullchefo.com"
+
+
                 ));
                 cc.setAllowedHeaders(List.of("*"));
                 cc.setAllowedMethods(List.of("*"));
