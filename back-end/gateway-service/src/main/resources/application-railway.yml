@@ -77,7 +77,7 @@ spring:
         - id: social-media-service-route
           # lb://car-history-service:8085 || lb://car-history-service
           # uri: http://smp-java-social-media-service:8092 
-          uri: http://social-media-service.railway.internal:8092
+          uri: http://social-media-service
           #uri: http://localhost:8092
           predicates:
             - Path=/social-media/**
