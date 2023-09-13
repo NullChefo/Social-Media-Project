@@ -78,7 +78,7 @@ spring:
           # lb://car-history-service:8085 || lb://car-history-service
           # uri: http://smp-java-social-media-service:8092
 
-          uri: http://social-media-service:8092
+          uri: https://social-media-service-production.up.railway.app
           #uri: http://localhost:8092
           predicates:
             - Path=/social-media/**
@@ -86,7 +86,7 @@ spring:
             - RewritePath=/social-media/(?<segment>.*), /$\{segment}
 
         - id: authorization-service-route
-          uri: https://localhost:9000
+          uri: https://authorization-service-production-1ef1.up.railway.app
           #uri: https://localhost:9000
           # uri: http://smp-java-authorization-service:9000
           predicates:
@@ -95,7 +95,7 @@ spring:
             - RewritePath=/authorization/(?<segment>.*), /$\{segment}
 
         - id: mail-send-route
-          uri: http://localhost:8083
+          uri: https://mail-send-service-production.up.railway.app
         #  uri: http://localhost:8083
         #  uri: http://smp-java-mail-send-serviced:8083
           predicates:
