@@ -150,8 +150,8 @@ management:
 
 address:
   frontEnd:
-    baseURL: ${BASE_URL:"https://social-media-project.nullchefo.com"}
-    successfullyLogOut: ${SUCCESSFULLY_LOG_OUT:"https://ui-social-media-project-java-railway.nullchefo.com/auth/logged-out"}
+    baseURL: ${BASE_URL:https://social-media-project.nullchefo.com}
+    successfullyLogOut: ${SUCCESSFULLY_LOG_OUT:https://ui-social-media-project-java-railway.nullchefo.com/auth/logged-out}
 
 springdoc:
   api-docs:

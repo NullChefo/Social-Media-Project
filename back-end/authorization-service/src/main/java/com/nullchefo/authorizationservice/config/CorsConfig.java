@@ -66,7 +66,6 @@ public class CorsConfig {
                         "https://github.com",
                         "https://backend.nullchefo.com",
                         "https://auth.nullchefo.com",
-
 						"https://social-media-project.nullchefo.com",
 						"https://authorization.social-media-project.nullchefo.com",
 						"https://smp-java-authorization-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
@@ -74,7 +73,6 @@ public class CorsConfig {
 						"https://smp-java-gateway-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
 						"https://smp-java-mail-send-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
 						"https://smp-java-social-media-service.icyisland-40395fb3.westeurope.azurecontainerapps.io",
-
 						"https://social-media-project-java.nullchefo.com",
 						"https://api.social-media-project-java.nullchefo.com",
 						"https://authorization.social-media-project-java.nullchefo.com",
