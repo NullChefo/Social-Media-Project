@@ -86,7 +86,7 @@ spring:
             - RewritePath=/social-media/(?<segment>.*), /$\{segment}
 
         - id: authorization-service-route
-          uri: https://authorization-service-production-1ef1.up.railway.app
+          uri: https://authorization-social-media-project-java-railway.nullchefo.com
           #uri: https://localhost:9000
           # uri: http://smp-java-authorization-service:9000
           predicates:
