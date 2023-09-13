@@ -16,19 +16,24 @@ import java.time.Instant;
 public class Client {
     @Id
     private String id;
-    @Column(nullable = true)
+
+    @Column(nullable = true, length = 9000)
     private String clientId;
+	@Column(length = 9000)
     private Instant clientIdIssuedAt;
+	@Column(length = 9000)
     private String clientSecret;
+	@Column(length = 9000)
     private Instant clientSecretExpiresAt;
+	@Column(length = 9000)
     private String clientName;
-    @Column(length = 1000)
+	@Column(length = 9000)
     private String clientAuthenticationMethods;
-    @Column(length = 1000)
+	@Column(length = 9000)
     private String authorizationGrantTypes;
-    @Column(length = 1000)
+	@Column(length = 9000)
     private String redirectUris;
-    @Column(length = 1000)
+	@Column(length = 9000)
     private String scopes;
     @Column(length = 9000)
     private String clientSettings;

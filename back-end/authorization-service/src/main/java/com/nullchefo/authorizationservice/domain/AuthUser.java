@@ -62,10 +62,13 @@ public class AuthUser implements OAuth2User {
     private LocalDateTime verifiedAt;
 
     // OAUTH
+	@Column(length = 9000)
     private String givenName;
 
+	@Column(length = 9000)
     private String location;
 
+	@Column(length = 9000)
     private String thirdPartyId;
 
     @Convert(converter = StringMapConverter.class)

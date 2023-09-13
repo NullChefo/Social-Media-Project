@@ -16,8 +16,11 @@ public class Authorization {
     @Id
     //	@GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
+	@Column(length = 9000)
     private String registeredClientId;
+	@Column(length = 9000)
     private String principalName;
+	@Column(length = 9000)
     private String authorizationGrantType;
     @Column(length = 9000)
     private String authorizedScopes;
@@ -31,6 +34,7 @@ public class Authorization {
     private String authorizationCodeValue;
     private Instant authorizationCodeIssuedAt;
     private Instant authorizationCodeExpiresAt;
+	@Column(length = 9000)
     private String authorizationCodeMetadata;
 
     @Column(length = 9000)
