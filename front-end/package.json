@@ -8,6 +8,7 @@
     "build": "ng build",
     "build-versel": "ng build --configuration versel",
     "build-hetzner": "ng build --configuration hetzner",
+    "build-railway": "ng build --configuration railway",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-production": "ng build  --aot --build-optimizer --common-chunk --vendor-chunk --optimization --progress --configuration=production"

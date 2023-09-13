@@ -1,0 +1,31 @@
+name: Build frontend-service railway
+on:
+  push:
+    branches:
+      - main
+      # - dev
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - uses: actions/checkout@v2
+      - name: Goes to FE directory
+        run: |
+          cd front-end
+          docker build -t ghcr.io/nullchefo/social_media_project-front-end:latest-railway -f Dockerfile_Railway .
+          
+      # - name: Build the Docker image
+      #   uses: docker/build-push-action@v2
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: ghcr.io/nullchefo/social_media_project-front-end:latest
+      #     file: ./Dockerfile      
+      - name: Push to GitHub Packages with latest tag
+        run: docker push ghcr.io/nullchefo/social_media_project-front-end:latest-railway

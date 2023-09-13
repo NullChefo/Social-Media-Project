@@ -49,7 +49,10 @@
         <div *ngIf="profile?.username ==  currentUsername" class="flex space-x-4 pb-4">
 
 
+         
           <a class="text-blue-400 underline" routerLink="/profile/edit"> <i></i>Profile settings</a>
+
+           <!-- TODO make a way to store the data into different archive database for non EU citizens and for EU citizens delete them  -->
           <button (click)="deleteProfile(profile?.username)" class="text-red-600 underline">Delete profile
           </button>
 

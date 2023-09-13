@@ -146,3 +146,4 @@ fabric.properties
 /.idea/jarRepositories.xml
 
 **/.DS_Store
+.fake
