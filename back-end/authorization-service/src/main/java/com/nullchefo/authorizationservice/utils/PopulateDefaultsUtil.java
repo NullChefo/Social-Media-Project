@@ -76,6 +76,8 @@ public class PopulateDefaultsUtil {
 																	"https://ui-social-media-project-java-railway.nullchefo.com/auth/authorized")
 															.redirectUri(
 																	"https://ui-social-media-project-java-railway.nullchefo.com")
+															.redirectUri(
+																	"https://authorization-social-media-project-java-railway.nullchefo.com")
 
 															.tokenSettings(TokenSettings
 																				   .builder().accessTokenTimeToLive(
