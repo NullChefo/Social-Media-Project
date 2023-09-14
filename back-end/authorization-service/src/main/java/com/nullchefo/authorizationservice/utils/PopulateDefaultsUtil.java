@@ -55,7 +55,13 @@ public class PopulateDefaultsUtil {
 															.redirectUri(
 																	"https://social-media-project-java.nullchefo.com/auth/authorized")
 															.redirectUri(
+																	"https://ui.social-media-project-java.nullchefo.com/auth/authorized")
+															.redirectUri(
 																	"https://social-media-project-java.nullchefo.com")
+															.redirectUri(
+																	"https://ui.social-media-project-java.nullchefo.com")
+															.redirectUri(
+																	"https://ui.social-media-project-java.nullchefo.com/silent-renew.html")
 															.redirectUri(
 																	"https://social-media-project-java.nullchefo.com/silent-renew.html")
 															.redirectUri(

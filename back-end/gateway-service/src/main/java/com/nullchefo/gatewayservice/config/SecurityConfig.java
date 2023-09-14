@@ -50,7 +50,8 @@ public class SecurityConfig {
 							"https://api-social-media-project-java-railway.nullchefo.com",
 							"http://api-social-media-project-java-railway.nullchefo.com",
 							"https://ui-social-media-project-java-railway.nullchefo.com",
-							"http://ui-social-media-project-java-railway.nullchefo.com"
+							"http://ui-social-media-project-java-railway.nullchefo.com",
+							"https://ui.social-media-project-java.nullchefo.com"
 							));
                     configuration.setAllowedMethods(List.of("*"));
                     configuration.setAllowedHeaders(List.of("*"));

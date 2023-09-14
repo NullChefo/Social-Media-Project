@@ -79,7 +79,8 @@ public class SpringSecurityConfig {
 											 "https://api-social-media-project-java-railway.nullchefo.com",
 											 "http://api-social-media-project-java-railway.nullchefo.com",
 											 "https://ui-social-media-project-java-railway.nullchefo.com",
-											 "http://ui-social-media-project-java-railway.nullchefo.com"
+											 "http://ui-social-media-project-java-railway.nullchefo.com",
+											 "https://ui.social-media-project-java.nullchefo.com"
 
 											));
                 cc.setAllowedHeaders(List.of("*"));
