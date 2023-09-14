@@ -4,7 +4,7 @@ export const environment = {
     enableEmailSendForRegistrationScreen: false,
     AUTH_SERVER_URI: "https://authorization.social-media-project-java.nullchefo.com",
     API_URI: "https://api.social-media-project-java.nullchefo.com",
-    REDIRECT_URI: "https://social-media-project-java.nullchefo.com/auth/authorized",
+    REDIRECT_URI: "https://ui.social-media-project-java.nullchefo.com/auth/authorized",
 
 };
 export const UI_PORT = 4020;
