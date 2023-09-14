@@ -78,7 +78,7 @@ spring:
           # lb://car-history-service:8085 || lb://car-history-service
           # uri: http://smp-java-social-media-service:8092
 
-          uri: http://social-media-service
+          uri: https://social-media-service-production.up.railway.app
         #  uri: http://social-media-service.railway.internal::8092
           #uri: http://localhost:8092
           predicates:
