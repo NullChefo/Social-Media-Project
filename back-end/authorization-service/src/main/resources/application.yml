@@ -83,10 +83,8 @@ spring:
             provider: twitter
             client-id: ${TWITTER_CLIENT_ID:twitter_id}
             client-secret: ${TWITTER_CLIENT_SECRET:twitter_secret}
-#            authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/api/login/oauth2/code/{registrationId}"
-            scope:
-              - tweet.read
+            scope: tweet.read
 
         provider:
           google:
@@ -101,6 +99,7 @@ spring:
           facebook:
             user-name-attribute: email
           twitter:
+            user-name-attribute: email
             authorization-uri: https://twitter.com/i/oauth2/authorize
             token-uri: https://api.twitter.com/2/oauth2/token
 logging:
