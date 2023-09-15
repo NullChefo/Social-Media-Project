@@ -22,9 +22,9 @@ jobs:
         name: Build and push Docker images for linux-arm64
         id: build-arm64
         with:
-          arch: armv64
+          arch: arm64
           distro: ubuntu-latest
           run: |
             cd front-end
             docker build -t ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-arm64 -f Dockerfile_Hetzner .
-            docker push ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-amd64
+            docker push ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-arm64
