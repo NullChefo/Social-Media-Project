@@ -40,7 +40,7 @@ spring:
           enabled: false
       routes:
         - id: user-service-route
-          uri: http://user-service:8081
+          uri: http://user:8081
           predicates:
             - Path=/user/**
           filters:
@@ -64,7 +64,7 @@ spring:
 
         - id: mail-process-service-route
           # lb://mail-process-service:8084 || lb://mail-process-service
-          uri: http://mail-process-service:8084
+          uri: http://mail-process:8084
           predicates:
             - Path=/mail/**
           filters:
@@ -72,7 +72,7 @@ spring:
 
 
         - id: car-history-service-route
-          uri: http://car-history-service:8085
+          uri: http://car-history:8085
           # lb://car-history-service:8085 || lb://car-history-service
           # uri: http://localhost:8085
           predicates:
@@ -84,7 +84,7 @@ spring:
         - id: social-media-service-route
           # lb://car-history-service:8085 || lb://car-history-service
           # uri: http://smp-java-social-media-service:8092 
-          uri: http://social-media-service:8092
+          uri: http://social-media:8092
           #uri: http://localhost:8092
           predicates:
             - Path=/social-media/**
@@ -92,7 +92,7 @@ spring:
             - RewritePath=/social-media/(?<segment>.*), /$\{segment}
 
         - id: authorization-service-route
-          uri: http://authorization-service:9000
+          uri: http://authorization:9000
           #uri: https://localhost:9000
           # uri: http://smp-java-authorization-service:9000
           predicates:
@@ -101,7 +101,7 @@ spring:
             - RewritePath=/authorization/(?<segment>.*), /$\{segment}
 
         - id: mail-send-service-route
-          uri: http://mail-send-service:8083
+          uri: http://mail-send:8083
         #  uri: http://localhost:8083
         #  uri: http://smp-java-mail-send-serviced:8083
           predicates:
