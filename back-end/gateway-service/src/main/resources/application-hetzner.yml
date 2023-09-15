@@ -64,7 +64,7 @@ spring:
 
         - id: mail-process-service-route
           # lb://mail-process-service:8084 || lb://mail-process-service
-          uri: http:// mail-process-service:8084
+          uri: http://mail-process-service:8084
           predicates:
             - Path=/mail/**
           filters:
@@ -101,7 +101,7 @@ spring:
             - RewritePath=/authorization/(?<segment>.*), /$\{segment}
 
         - id: mail-send-service-route
-          uri: http:// mail-send-service:8083
+          uri: http://mail-send-service:8083
         #  uri: http://localhost:8083
         #  uri: http://smp-java-mail-send-serviced:8083
           predicates:
