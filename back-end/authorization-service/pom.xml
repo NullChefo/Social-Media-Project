@@ -308,14 +308,16 @@
                     <from>
                         <image>azul/zulu-openjdk-alpine:17-jre-headless-latest
                         </image>
-                        <!-- TODO change
-                        <platforms>
-                            <platform>
-                                <architecture>arm64</architecture>
-                                <os>linux</os>
-                            </platform>
-                        </platforms>
-                         -->
+						<platforms>
+							<platform>
+								<architecture>amd64</architecture>
+								<os>linux</os>
+							</platform>
+							<platform>
+								<architecture>arm64</architecture>
+								<os>linux</os>
+							</platform>
+						</platforms>
                     </from>
                     <to>
                         <image>ghcr.io/nullchefo/social-media-project-${project.artifactId}:${project.version}</image>
