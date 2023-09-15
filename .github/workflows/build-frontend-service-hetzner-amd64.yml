@@ -19,7 +19,7 @@ jobs:
       - name: Goes to FE directory
         run: |
           cd front-end
-          docker build -t ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner -f Dockerfile_Hetzner .
+          docker build -t ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-amd64 -f Dockerfile_Hetzner .
 
       # - name: Build the Docker image
       #   uses: docker/build-push-action@v2
