@@ -24,7 +24,7 @@ public class LoginController {
         Authentication loggedInUser = securityContext.getAuthentication();
         log.trace("Logged-in user: {}", loggedInUser);
         if (loggedInUser.getPrincipal() != "anonymousUser") {
-            return "redirect:https://diploma-project.nullchefo.com";
+            return "redirect:https://ui.social-media-project-java.nullchefo.com";
         } else {
             return "redirect:/login";
         }

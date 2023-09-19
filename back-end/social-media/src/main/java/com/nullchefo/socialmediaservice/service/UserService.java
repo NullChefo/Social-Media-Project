@@ -333,11 +333,11 @@ public class UserService {
         //	});
 
 
-		// TODO!!! fix mail send and disable user
-        //	Thread.ofVirtual().start(() -> {
-        //sends the verification token
-        // mailProducerService.sendEmailVerification(user, token);
-        //	});
+	//	// TODO!!! fix mail send and disable user
+	//	Thread.ofVirtual().start(() -> {
+        // // sends the verification token
+         mailProducerService.sendEmailVerification(user, token);
+	//	});
 
     }
 
