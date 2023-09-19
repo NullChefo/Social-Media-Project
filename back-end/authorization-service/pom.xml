@@ -363,7 +363,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <from>
-                        <image>azul/zulu-openjdk-alpine:17-jre-headless-latest
+                        <image>azul/zulu-openjdk-alpine:20-jre-headless-latest
                         </image>
 						<platforms>
 							<platform>
