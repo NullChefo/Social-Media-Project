@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - dev
 
 jobs:
   build-and-push:
@@ -18,13 +19,13 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - uses: actions/checkout@v2
 
-      - uses: uraimo/run-on-arch-action@v2
-        name: Build and push Docker images for linux-arm64
-        id: build-arm64
-        with:
-          arch: arm64
-          distro: ubuntu-latest
-          run: |
-            cd front-end
-            docker build -t ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-arm64 -f Dockerfile_Hetzner .
-            docker push ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-arm64
+      # - uses: uraimo/run-on-arch-action@v2
+      #   name: Build and push Docker images for linux-arm64
+      #   id: build-arm64
+      #   with:
+      #     arch: arm64
+      #     distro: ubuntu-latest
+      #     run: |
+      #       cd front-end
+      #       docker build -t ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-arm64 -f Dockerfile_Hetzner .
+      #       docker push ghcr.io/nullchefo/social_media_project-front-end:latest-hetzner-arm64
