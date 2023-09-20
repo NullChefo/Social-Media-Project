@@ -12,7 +12,7 @@
     <name>mail-send-service</name>
     <description>Mail send service</description>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <start-class>com.nullchefo.mailservice.MailSendServiceApplication</start-class>
@@ -243,7 +243,7 @@
 							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
 						</buildpacks>
 						<env>
-							<BP_JVM_VERSION>21.0.0</BP_JVM_VERSION>
+							<BP_JVM_VERSION>20.0.0</BP_JVM_VERSION>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 <!--							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>&#45;&#45;enable-preview</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>-->
 						</env>
@@ -288,7 +288,7 @@
                 <version>3.3.1</version>
                 <configuration>
                     <from>
-                        <image>zul/zulu-openjdk-alpine:21-jre-headless-latest</image> 
+                        <image>zul/zulu-openjdk-alpine:20-jre-headless-latest</image>
                         <!-- azul/zulu-openjdk-alpine:19-jre-headless-latest -->
 						<platforms>
 							<platform>
