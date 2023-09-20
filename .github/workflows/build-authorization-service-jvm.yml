@@ -40,4 +40,4 @@ jobs:
           cd back-end/authorization-service
           mvn dependency:go-offline
           mvn test
-          mvn compile jib:build  -e -X
+          mvn -e -X compile jib:build
