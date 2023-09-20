@@ -7,16 +7,12 @@
 		<groupId>com.nullchefo</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-    <groupId>com.nullchefo</groupId>
     <artifactId>gateway-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gateway-service</name>
     <description>Spring gateway service</description>
     <properties>
-        <java.version>17</java.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <start-class>com.nullchefo.gatewayservice.GatewayServiceApplication</start-class>
         <testcontainers.version>1.18.1</testcontainers.version>
     </properties>
@@ -211,7 +207,7 @@
 							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
 						</buildpacks>
 						<env>
-<!--							<BP_JVM_VERSION>21.0.0</BP_JVM_VERSION>-->
+							<BP_JVM_VERSION>17.0.8</BP_JVM_VERSION>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 <!--							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>&#45;&#45;enable-preview</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>-->
 						</env>
@@ -233,7 +229,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <from>
-                        <image>zul/zulu-openjdk-alpine:21-jre-headless-latest</image> 
+                        <image>zul/zulu-openjdk-alpine:17-jre-headless-latest</image>
                         <!-- azul/zulu-openjdk-alpine:19-jre-headless-latest -->
 						<platforms>
 							<platform>
