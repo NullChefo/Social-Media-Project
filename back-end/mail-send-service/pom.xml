@@ -285,7 +285,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <from>
-                        <image>zul/zulu-openjdk-alpine:17-jre-headless-latest</image>
+                        <image>azul/zulu-openjdk-alpine:17-jre-headless-latest</image>
                         <!-- azul/zulu-openjdk-alpine:21-jre-headless-latest -->
 						<platforms>
 							<platform>
