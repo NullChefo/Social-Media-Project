@@ -90,7 +90,7 @@ jobs:
         run: docker tag social-media-service:0.0.1-SNAPSHOT ghcr.io/nullchefo/social-media-project-social-media-service--native
 
       - name: Tag the Docker image as native
-        run: docker tag ghcr.io/nullchefo/social-media-project-social-media-service ghcr.io/nullchefo/social-media-project-social-media-service--native:latest
+        run: docker tag ghcr.io/nullchefo/social-media-project-social-media-service--native ghcr.io/nullchefo/social-media-project-social-media-service--native:latest
 
       - name: Push Images to Docker Registry
         run: docker push -a ghcr.io/nullchefo/social-media-project-social-media-service--native
