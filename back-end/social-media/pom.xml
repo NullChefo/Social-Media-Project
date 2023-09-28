@@ -316,7 +316,7 @@
 						</buildpacks>
 						<env>
 					<!--	https://github.com/paketo-buildpacks/azul-zulu/releases	-->
-							<BP_JVM_VERSION>17.0.8</BP_JVM_VERSION>
+							<BP_JVM_VERSION>21.0.0</BP_JVM_VERSION>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 						</env>
 					</image>
@@ -368,7 +368,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <from>
-                        <image>azul/zulu-openjdk-alpine:17-jre-headless-latest</image>
+                        <image>azul/zulu-openjdk-alpine:21-jre-headless-latest</image>
                         <!-- azul/zulu-openjdk-alpine:19-jre-headless-latest -->
 						<platforms>
 							<platform>
