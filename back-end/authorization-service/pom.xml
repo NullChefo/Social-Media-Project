@@ -339,7 +339,7 @@
 							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
 						</buildpacks>
 						<env>
-							<BP_JVM_VERSION>17.0.8</BP_JVM_VERSION>
+							<BP_JVM_VERSION>21.0.0</BP_JVM_VERSION>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 <!--							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>&#45;&#45;enable-preview</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>-->
 						</env>
@@ -360,7 +360,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <from>
-                        <image>azul/zulu-openjdk-alpine:17-jre-headless-latest</image>
+                        <image>azul/zulu-openjdk-alpine:21-jre-headless-latest</image>
                         <!-- azul/zulu-openjdk-alpine:19-jre-headless-latest -->
 						<platforms>
 							<platform>
