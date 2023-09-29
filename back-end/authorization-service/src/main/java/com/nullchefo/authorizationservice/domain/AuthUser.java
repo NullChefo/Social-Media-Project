@@ -38,7 +38,7 @@ public class AuthUser implements OAuth2User {
     private String password;
     private String avatarURL;
     @Convert(converter = SimpleGrantedAuthoritySetConverter.class)
-    @Column(name = "granted_authorities", length = 9000, columnDefinition = "text")
+    @Column(name = "granted_authorities", columnDefinition = "text")
     private Set<SimpleGrantedAuthority> grantedAuthorities;
     private LocalDateTime updatedAt;
     @Builder.Default
@@ -62,17 +62,14 @@ public class AuthUser implements OAuth2User {
     private LocalDateTime verifiedAt;
 
     // OAUTH
-	@Column(length = 9000)
     private String givenName;
 
-	@Column(length = 9000)
     private String location;
 
-	@Column(length = 9000)
     private String thirdPartyId;
 
     @Convert(converter = StringMapConverter.class)
-    @Column(name = "attributes", length = 9000, columnDefinition = "text", nullable = true)
+    @Column(name = "attributes", columnDefinition = "text", nullable = true)
     private Map<String, String> attributes;
 
     // Methods

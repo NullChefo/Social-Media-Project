@@ -17,7 +17,6 @@ public class AuthorizationConsent {
     private String registeredClientId;
     @Id
     private String principalName;
-    @Column(length = 9000)
     private String authorities;
 
     public static class AuthorizationConsentId implements Serializable {
