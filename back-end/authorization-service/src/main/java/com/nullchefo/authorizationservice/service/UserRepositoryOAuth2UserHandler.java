@@ -107,6 +107,11 @@ public class UserRepositoryOAuth2UserHandler implements Consumer<OAuth2User> {
 
             AuthUser newUser = OAuthToUser(user);
 
+			// It is not ok to store that much data
+			if(newUser.getAttributes().size() >250) {
+				newUser.setAttributes(null);
+			}
+
             newUser.setEmail(email);
             newUser.setLocation(location);
             newUser.setAvatarURL(avatarUrl);
