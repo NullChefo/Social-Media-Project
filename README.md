@@ -7,3 +7,5 @@
 [//]: # (    - Grafana:  https://grafana.nullchefo.com/?orgId=1)
 [//]: # (    - UI: https://diploma-project.nullchefo.com)
 [//]: # (    - Autorization: https://auth.nullchefo.com/login)
+
+Hello world!
