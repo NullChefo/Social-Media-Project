@@ -17,26 +17,26 @@ public class Client {
     @Id
     private String id;
 
-    @Column(nullable = true, length = 999)
+    @Column(nullable = true, length = 9999)
     private String clientId;
     private Instant clientIdIssuedAt;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String clientSecret;
-    @Column(length = 999)
+    @Column(length = 9999)
     private Instant clientSecretExpiresAt;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String clientName;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String clientAuthenticationMethods;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String authorizationGrantTypes;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String redirectUris;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String scopes;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String clientSettings;
-    @Column(length = 999)
+    @Column(length = 9999)
     private String tokenSettings;
 
 }
