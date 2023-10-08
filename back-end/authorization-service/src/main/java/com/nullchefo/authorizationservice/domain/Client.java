@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
-# TODO fix
+// TODO fix
 @Entity
 @Table(name = "client")
 @Getter
