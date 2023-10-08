@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
-
+# TODO fix
 @Entity
 @Table(name = "client")
 @Getter
@@ -17,17 +17,26 @@ public class Client {
     @Id
     private String id;
 
-    @Column(nullable = true)
+    @Column(nullable = true, length = 999)
     private String clientId;
     private Instant clientIdIssuedAt;
+    @Column(length = 999)
     private String clientSecret;
+    @Column(length = 999)
     private Instant clientSecretExpiresAt;
+    @Column(length = 999)
     private String clientName;
+    @Column(length = 999)
     private String clientAuthenticationMethods;
+    @Column(length = 999)
     private String authorizationGrantTypes;
+    @Column(length = 999)
     private String redirectUris;
+    @Column(length = 999)
     private String scopes;
+    @Column(length = 999)
     private String clientSettings;
+    @Column(length = 999)
     private String tokenSettings;
 
 }
